@@ -50,3 +50,5 @@ C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\obj\Debug\CRM.DAL.csproj.CoreCompileInput
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\obj\Debug\CRM.DAL.csproj.CopyComplete
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\obj\Debug\CRM.DAL.dll
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\obj\Debug\CRM.DAL.pdb
+C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\ET.dll
+C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\ET.pdb
