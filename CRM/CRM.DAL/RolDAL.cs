@@ -17,7 +17,7 @@ namespace CRM.DAL
 
             try
             {
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["SITE_CRM.Properties.Settings.CRMdb"].ToString()))
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
                 {
                     con.Open();
 
