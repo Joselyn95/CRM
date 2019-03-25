@@ -30,6 +30,16 @@ namespace SITE_CRM
                 "~/Content/js/demo/chart-area-demo.js"
 
                 ));
+
+            bundles.Add(new ScriptBundle("~/bundles/jquery")
+                .Include(
+                       "~/Scripts/jquery-{version}.js",
+                       "~/Scripts/jquery.validate*",
+                       "~/Scripts/modernizr-*",
+                       "~/Scripts/bootstrap.js",
+                        "~/Content/bootstrap.css",
+                        "~/Content/Site.css"
+                       ));
         }
     }
 }

@@ -20,7 +20,7 @@ namespace CRM.DAL
             try
             {
                 //"SITE_CRM.Properties.Settings.CRMdb"
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["SITE_CRM.Properties.Settings.CRMdb"].ToString()))
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
                  
                 {
                     con.Open();
@@ -63,7 +63,7 @@ namespace CRM.DAL
 
             try
             {
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["SITE_CRM.Properties.Settings.CRMdb"].ToString()))
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
                 {
                     con.Open();
                     var query = new SqlCommand("Select * From Contacto where Id_Contacto = @id", con);
@@ -96,7 +96,7 @@ namespace CRM.DAL
 
             try
             {
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["SITE_CRM.Properties.Settings.CRMdb"].ToString()))
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
                 {
                     con.Open();
 
@@ -127,7 +127,7 @@ namespace CRM.DAL
             //string c = contacto.Apellido1.ToLower() + contacto.Nombre.ToLower();
             try
             {
-                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["SITE_CRM.Properties.Settings.CRMdb"].ToString()))
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
                 {
                     con.Open();
 
