@@ -33,7 +33,6 @@ namespace SITE_CRM.Controllers
 
             if (!r)
             {
-                // Podemos validar para mostrar un mensaje personalizado, por ahora el aplicativo se caera por el throw que hay en nuestra capa DAL
                 ViewBag.Mensaje = "Ocurrio un error inesperado";
                 return View("~/Views/Shared/_Mensajes.cshtml");
             }

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model SITE_CRM.Models.modelTab
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -17,8 +19,8 @@
         .tabcontent {
             display: none;
         }
-        
-        .tablink{
+
+        .tablink {
             background-color: #555;
             color: white;
             float: left;
@@ -27,7 +29,8 @@
             cursor: pointer;
             padding: 14px 17px;
         }
-        .container-fluid{
+
+        .container-fluid {
             width: 100%;
         }
     </style>
@@ -135,19 +138,13 @@
                         <button class="tablink" onclick="openPage('tab1',this,'grey')"> Empresa</button>
                     </li>
                     <li>
-                        <button class="tablink" onclick="openPage('tab2',this,'grey')">Información de contacto</button>
+                        <button class="tablink" onclick="openPage('tab2',this,'grey')">Contactos</button>
                     </li>
                     <li>
-                        <button class="tablink" onclick="openPage('tab3',this,'grey')">Dominio</button>
+                        <button class="tablink" onclick="openPage('tab3',this,'grey')">Servicios</button>
                     </li>
                     <li>
-                        <button class="tablink" onclick="openPage('tab4',this,'grey')">Servidor</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab5',this,'grey')">Saldo</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab6',this,'grey')">Cuentas</button>
+                        <button class="tablink" onclick="openPage('tab4',this,'grey')">Cuentas</button>
                     </li>
                 </ul>
 
@@ -157,26 +154,70 @@
                 </div>
 
                 <div class="tabcontent" id="tab2">
-                    <h1>Tab 2</h1>
+                    <h2>Contactos</h2>
+                    <a href="~/Contacto/Editar">Nuevo Registro</a>
+
+                    <table style="width: 500px">
+                        <thead>
+                            <tr>
+                                <th style="text-align:left;">Nombre</th>
+                                <th style="text-align:left;">Puesto</th>
+                                <th style="text-align:left;">Empresa</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var u in Model.contacto)
+                            {
+                                <tr>
+                                    <td>@u.Nombre @u.Apellido1 @u.Apellido2</td>
+                                    <td>@u.Puesto</td>
+                                    <td>@u.Empresa</td>
+
+                                    <td style="width:200px">
+                                        <a title="Editar" href="~/Contacto/Editar/@u.Id_Contacto"> Editar</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
 
                 <div class="tabcontent" id="tab3">
 
-                    <h1>Tab 3</h1>
-                </div>
+                    <h1>Servicios</h1>
+
+                        <table style="width: 500px">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;">Nombre</th>
+                                    <th style="text-align:left;">Tipo Servicio</th>
+                                    <th style="text-align:left;">Descripcion</th>
+                                    <th style="text-align:left;">Cantidad Inventario</th>
+                                    <th style="text-align:left;">Precio</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var u in Model.servicioEmp)
+                                {
+                                    <tr>
+                                        <td>@u.Nombre </td>
+                                        <td>@u.Tipo_Servicio</td>
+                                        <td>@u.Descripcion</td>
+                                        <td>@u.Cantidad_Inventario</td>
+                                        <td>@u.Precio</td>
+                                        <td style="width:200px">
+                                            <a title="Editar" href="~/Usuario/Editar/@u.Id_ServicioEmpresa"> Editar</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 <div class="tabcontent" id="tab4">
 
                     <h1>Tab 4</h1>
-                </div>
-
-                <div class="tabcontent" id="tab5">
-
-                    <h1>Tab 5</h1>
-                </div>
-
-                <div class="tabcontent" id="tab6">
-
-                    <h1>Tab 6</h1>
                 </div>
             </div>
             <!-- /.container-fluid -->
