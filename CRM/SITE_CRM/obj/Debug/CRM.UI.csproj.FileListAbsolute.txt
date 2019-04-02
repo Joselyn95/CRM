@@ -90,15 +90,10 @@ C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Net.Http.Formatting.dll
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Web.Http.dll
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Web.Http.WebHost.dll
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\CRM.DAL.dll
-C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\ServiceStack.OrmLite.dll
-C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\ServiceStack.OrmLite.SqlServer.dll
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Net.Http.Formatting.xml
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Web.Http.xml
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\System.Web.Http.WebHost.xml
 C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\CRM.DAL.pdb
-C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\CRM.DAL.dll.config
-C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\ServiceStack.OrmLite.pdb
-C:\Users\FSH\Documents\CRM\CRM\SITE_CRM\bin\ServiceStack.OrmLite.SqlServer.pdb
 C:\Users\User\Documents\GitHub\ProyectoCRM\CRM\CRM\SITE_CRM\bin\SITE_CRM.dll.config
 C:\Users\User\Documents\GitHub\ProyectoCRM\CRM\CRM\SITE_CRM\bin\SITE_CRM.dll
 C:\Users\User\Documents\GitHub\ProyectoCRM\CRM\CRM\SITE_CRM\bin\SITE_CRM.pdb

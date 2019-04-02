@@ -10,7 +10,6 @@ namespace SITE_CRM.Controllers
     public class ContactoController : Controller
     {
         private ContactoBL contactoBL = new ContactoBL();
-        //private RolBL rolBL = new RolBL();
 
         // GET: Usuario
         public ActionResult Index()
@@ -20,7 +19,6 @@ namespace SITE_CRM.Controllers
 
         public ActionResult Editar(int id = 0)
         {
-            //ViewBag.Roles = rolBL.Listar();
             return View(id == 0 ? new Contacto() : contactoBL.Obtener(id));
         }
 
@@ -32,7 +30,6 @@ namespace SITE_CRM.Controllers
 
             if (!r)
             {
-                // Podemos validar para mostrar un mensaje personalizado, por ahora el aplicativo se caera por el throw que hay en nuestra capa DAL
                 ViewBag.Mensaje = "Ocurrio un error inesperado";
                 return View("~/Views/Shared/_Mensajes.cshtml");
             }

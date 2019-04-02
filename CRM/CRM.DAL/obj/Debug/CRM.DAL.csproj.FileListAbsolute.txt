@@ -1,4 +1,3 @@
-C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\CRM.DAL.dll.config
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\CRM.DAL.dll
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\CRM.DAL.pdb
 C:\Users\FSH\Documents\CRM\CRM\CRM.DAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Data.dll
