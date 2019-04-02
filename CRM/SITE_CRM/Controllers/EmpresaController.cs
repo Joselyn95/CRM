@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Mvc.Ajax;
-using AjaxControlToolkit;
 using BL;
 using ET;
 
 namespace SITE_CRM.Controllers
 {
-    public class TabsEmpresaController : Controller
+    public class EmpresaController : Controller
     {
-
         private EmpresaBL empresaBL = new EmpresaBL();
         private ProvinciaBL provinciaBL = new ProvinciaBL();
         private CantonBL cantonBL = new CantonBL();
         private DistritoBL distritoBL = new DistritoBL();
-        // GET: TabsEmpresa
-        public ActionResult Index ()
+        // GET: Empresa
+        public ActionResult Index()
         {
-
             return View(empresaBL.Listar());
         }
+
         public ActionResult Editar(int id = 0)
         {
             ViewBag.Provincias = provinciaBL.Listar();
@@ -46,5 +43,8 @@ namespace SITE_CRM.Controllers
 
             return Redirect("~/Empresa/Index");
         }
+
+
+
     }
 }

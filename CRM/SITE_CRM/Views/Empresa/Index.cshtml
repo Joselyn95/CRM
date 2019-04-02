@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Index";
 }
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -134,52 +136,27 @@
 
         <div id="content-wrapper">
             <div class="container-fluid">
-                <ul id="tabs" class="nav nav-tabs" data-tabbs="tabs">
-                    <li>
-                        <button class="tablink" onclick="openPage('tab1',this,'grey')"> Empresa</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab2',this,'grey')">Información de contacto</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab3',this,'grey')">Dominio</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab4',this,'grey')">Servidor</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab5',this,'grey')">Saldo</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab6',this,'grey')">Cuentas</button>
-                    </li>
-                </ul>
+                <h2>Empresas</h2>
+                <a href="~/Empresa/Editar">Nuevo Registro</a>
 
+                <table style="width: 500px">
+                    <thead>
+                        <tr>
+                            <th style="text-align:left;">Nombre</th>
+                            <th style="text-align:left;">Correo</th>
+                            <th style="text-align:left;">Cedula</th>
+                            <th style="text-align:left;">Pais</th>
+                            <th style="text-align:left;">Provincia</th>
+                            <th style="text-align:left;">Canton</th>
+                            <th style="text-align:left;">Distrito</th>
+                            <th style="text-align:left;">Otras_Señas</th>
+                            <th style="text-align:left;">Codigo_Postal</th>
+                        </tr>
+                    </thead>
 
-                <div class="tabcontent" id="tab1">
-                    <div id="content-wrapper">
-                        <div class="container-fluid">
-                            <h2>Empresas</h2>
-                            <a href="~/Empresa/Editar">Nuevo Registro</a>
-
-                            <table style="width: 500px">
-                                <thead>
-                                    <tr>
-                                        <th style="text-align:left;">Nombre</th>
-                                        <th style="text-align:left;">Correo</th>
-                                        <th style="text-align:left;">Cedula</th>
-                                        <th style="text-align:left;">Pais</th>
-                                        <th style="text-align:left;">Provincia</th>
-                                        <th style="text-align:left;">Canton</th>
-                                        <th style="text-align:left;">Distrito</th>
-                                        <th style="text-align:left;">Otras_Señas</th>
-                                        <th style="text-align:left;">Codigo_Postal</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    @foreach (var u in Model)
-                    {
+                    <tbody>
+                        @foreach (var u in Model)
+                        {
                         <tr>
                             <td>@u.Nombre @u.Correo @u.Cedula</td>
                             <td>@u.Pais</td>
@@ -192,47 +169,22 @@
                                 <a title="Editar" href="~/Empresa/Editar/@u.Id_Empresa"> Editar</a>
                             </td>
                         </tr>
-    }
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tabcontent" id="tab2">
-                    <h1>Tab 2</h1>
-                </div>
-
-                <div class="tabcontent" id="tab3">
-
-                    <h1>Tab 3</h1>
-                </div>
-                <div class="tabcontent" id="tab4">
-
-                    <h1>Tab 4</h1>
-                </div>
-
-                <div class="tabcontent" id="tab5">
-
-                    <h1>Tab 5</h1>
-                </div>
-
-                <div class="tabcontent" id="tab6">
-
-                    <h1>Tab 6</h1>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
                 </div>
             </div>
-            <!-- /.container-fluid -->
-            <!-- Sticky Footer -->
-            <footer class="sticky-footer">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright © Your Website 2019</span>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- /.content-wrapper -->
+        </footer>
+    </div>
+    <!-- /.content-wrapper -->
     </div>
     <!-- /#wrapper -->
     <!-- Scroll to Top Button-->
@@ -293,4 +245,5 @@
     </script>
 </body>
 </html>
+
 

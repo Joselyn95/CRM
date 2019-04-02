@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CantonBL.cs" />
     <Compile Include="ContactoBL.cs" />
+    <Compile Include="DistritoBL.cs" />
+    <Compile Include="EmpresaBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinciaBL.cs" />
     <Compile Include="RolBL.cs" />
     <Compile Include="UsuarioBL.cs" />
   </ItemGroup>
