@@ -90,7 +90,7 @@ namespace CRM.DAL
                             usuario.Apellido1 = dr["Apellido1"].ToString();
                             usuario.Apellido2 = dr["Apellido2"].ToString();
                             usuario.Correo = dr["Correo"].ToString();
-                            usuario.Clave = dr["Contraseña"].ToString();
+                            usuario.Contraseña = dr["Contraseña"].ToString();
                             usuario.Fecha_Creacion = Convert.ToDateTime(dr["Fecha_Creacion"]);
                             usuario.Rol_id = Convert.ToInt32(dr["Rol"]);
                         }
@@ -167,6 +167,42 @@ namespace CRM.DAL
             }
 
             return respuesta;
+        }
+
+        public Usuario Login(string correo, string contraseña)
+        {
+            var usuario = new Usuario();
+
+            try
+            {
+                using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["conexion"].ToString()))
+                {
+                    con.Open();
+                    var query = new SqlCommand("Select * From Usuario where Correo = @correo and Contraseña = @contraseña", con);
+                    query.Parameters.AddWithValue("@Correo", correo);
+
+                    using (var dr = query.ExecuteReader())
+                    {
+                        dr.Read();
+                        if (dr.HasRows)
+                        {
+                            usuario.Id_Usuario = Convert.ToInt32(dr["Id_Usuario"]);
+                            usuario.Nombre = dr["Nombre"].ToString();
+                            usuario.Apellido1 = dr["Apellido1"].ToString();
+                            usuario.Apellido2 = dr["Apellido2"].ToString();
+                            usuario.Correo = dr["Correo"].ToString();
+                            usuario.Contraseña = dr["Contraseña"].ToString();
+                            usuario.Fecha_Creacion = Convert.ToDateTime(dr["Fecha_Creacion"]);
+                            usuario.Rol_id = Convert.ToInt32(dr["Rol"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+            return usuario;
         }
 
     }

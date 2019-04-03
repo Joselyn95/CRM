@@ -13,8 +13,9 @@ namespace ET
         public String Apellido1 { get; set; }
         public String Apellido2 { get; set; }
         public String Correo { get; set; }
-        public String Clave { get; set; }
+        public String Contraseña { get; set; }
         public DateTime Fecha_Creacion { get; set; }
+        public int Empresa { get; set; }
         public int Rol_id{ get; set; }
 
         public Rol Rol { get; set; }
@@ -23,5 +24,6 @@ namespace ET
         {
             Rol = new Rol();
         }
+
     }
 }

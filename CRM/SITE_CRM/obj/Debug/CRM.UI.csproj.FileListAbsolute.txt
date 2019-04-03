@@ -296,3 +296,4 @@ C:\Users\Joselyn\Documents\GitHub\CRM\CRM\SITE_CRM\obj\Debug\CRM.UI.csproj.CoreC
 C:\Users\Joselyn\Documents\GitHub\CRM\CRM\SITE_CRM\obj\Debug\CRM.UI.csproj.CopyComplete
 C:\Users\Joselyn\Documents\GitHub\CRM\CRM\SITE_CRM\obj\Debug\SITE_CRM.dll
 C:\Users\Joselyn\Documents\GitHub\CRM\CRM\SITE_CRM\obj\Debug\SITE_CRM.pdb
+C:\Users\Joselyn\Documents\GitHub\CRM\CRM\SITE_CRM\bin\Owin.dll
