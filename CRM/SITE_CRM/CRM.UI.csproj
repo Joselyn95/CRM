@@ -1904,6 +1904,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Views\Shared\_LoginLayoutPage.cshtml" />
     <Content Include="Views\Shared\_LayoutDefault.cshtml" />
+    <Content Include="Views\ServicioEmp\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
