@@ -1,4 +1,8 @@
-﻿@model SITE_CRM.Models.modelTab
+﻿@model ET.ServicioEmpresa
+@{
+    ViewBag.Title = "Editar";
+    List<ET.Rol> roles = ViewBag.Roles;
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -133,105 +137,52 @@
 
         <div id="content-wrapper">
             <div class="container-fluid">
-                <ul id="tabs" class="nav nav-tabs" data-tabbs="tabs">
-                    <li>
-                        <button class="tablink" onclick="openPage('tab1',this,'grey')"> Empresa</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab2',this,'grey')">Contactos</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab3',this,'grey')">Servicios</button>
-                    </li>
-                    <li>
-                        <button class="tablink" onclick="openPage('tab4',this,'grey')">Cuentas</button>
-                    </li>
-                </ul>
+                <h2>@(Model.Id_ServicioEmpresa > 0 ? Model.Nombre : "Nuevo servicio")</h2>
 
 
-                <div class="tabcontent" id="tab1">
-                    <h1>Tab 1</h1>
-                </div>
+                @using (Html.BeginForm("guardar", "ServicioEmp", FormMethod.Post))
+                {
+                    @Html.HiddenFor(x => x.Id_ServicioEmpresa)
 
-                <div class="tabcontent" id="tab2">
-                    <h2>Contactos</h2>
-                    <a href="~/Contacto/Editar">Nuevo Registro</a>
+                    <label>Nombre</label><br />
+                    @Html.TextBoxFor(x => x.Nombre)
+                    <br /><br />
 
-                    <table style="width: 500px">
-                        <thead>
-                            <tr>
-                                <th style="text-align:left;">Nombre</th>
-                                <th style="text-align:left;">Puesto</th>
-                                <th style="text-align:left;">Empresa</th>
-                            </tr>
-                        </thead>
+                    <label>Tipo servicio</label><br />
+                    @Html.TextBoxFor(x => x.Tipo_Servicio)
+                    <br /><br />
 
-                        <tbody>
-                            @foreach (var u in Model.contacto)
-                            {
-                                <tr>
-                                    <td>@u.Nombre @u.Apellido1 @u.Apellido2</td>
-                                    <td>@u.Puesto</td>
-                                    <td>@u.Empresa</td>
+                    <label>Descripcion</label><br />
+                    @Html.TextBoxFor(x => x.Descripcion)
+                    <br /><br />
 
-                                    <td style="width:200px">
-                                        <a title="Editar" href="~/Contacto/Editar/@u.Id_Contacto"> Editar</a>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
+                    <label>Cantidad Inventario</label><br />
+                    @Html.TextBoxFor(x => x.Cantidad_Inventario)
+                    <br /><br />
 
-                <div class="tabcontent" id="tab3">
+                    <label>Precio</label><br />
+                    @Html.TextBoxFor(x => x.Precio)
+                    <br /><br />
 
-                    <h1>Servicios</h1>
-                    <a href="~/ServicioEmp/Editar">Nuevo Registro</a>
+                    <label>Empresa</label><br />
+                    @Html.TextBoxFor(x => x.Id_Empresa)
+                    <br /><br />
 
-                    <table style="width: 500px">
-                        <thead>
-                            <tr>
-                                <th style="text-align:left;">Nombre</th>
-                                <th style="text-align:left;">Tipo Servicio</th>
-                                <th style="text-align:left;">Descripcion</th>
-                                <th style="text-align:left;">Cantidad Inventario</th>
-                                <th style="text-align:left;">Precio</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            @foreach (var u in Model.servicioEmp)
-                            {
-                                <tr>
-                                    <td>@u.Nombre </td>
-                                    <td>@u.Tipo_Servicio</td>
-                                    <td>@u.Descripcion</td>
-                                    <td>@u.Cantidad_Inventario</td>
-                                    <td>@u.Precio</td>
-                                    <td style="width:200px">
-                                        <a title="Editar" href="~/Usuario/Editar/@u.Id_ServicioEmpresa"> Editar</a>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-                <div class="tabcontent" id="tab4">
-
-                    <h1>Tab 4</h1>
+                    <button type="submit">Enviar</button>
+                }
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright © Your Website 2019</span>
                 </div>
             </div>
-            <!-- /.container-fluid -->
-            <!-- Sticky Footer -->
-            <footer class="sticky-footer">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright © Your Website 2019</span>
-                    </div>
-                </div>
-            </footer>
-        </div>
-        <!-- /.content-wrapper -->
+        </footer>
+    </div>
+    <!-- /.content-wrapper -->
     </div>
     <!-- /#wrapper -->
     <!-- Scroll to Top Button-->
@@ -292,4 +243,6 @@
     </script>
 </body>
 </html>
+
+
 
