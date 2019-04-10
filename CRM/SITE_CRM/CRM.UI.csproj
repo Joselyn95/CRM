@@ -1874,6 +1874,7 @@
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PublicidadController.cs" />
     <Compile Include="Controllers\ServicioEmpController.cs" />
     <Compile Include="Controllers\TabsEmpresaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -1905,6 +1906,8 @@
     <Content Include="Views\Shared\_LoginLayoutPage.cshtml" />
     <Content Include="Views\Shared\_LayoutDefault.cshtml" />
     <Content Include="Views\ServicioEmp\Editar.cshtml" />
+    <Content Include="Views\Publicidad\Index.cshtml" />
+    <Content Include="Views\Publicidad\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

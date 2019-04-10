@@ -1,0 +1,80 @@
+﻿@model ET.Publicidad
+@{
+    ViewBag.Title = "Editar";
+}
+<div class="container-fluid">
+    <h2>@(Model.Id_Publicidad > 0 ? Model.Medio : "Nuevo contacto")</h2>
+
+
+    @using (Html.BeginForm("guardar", "Publicidad", FormMethod.Post))
+    {
+        @Html.HiddenFor(x => x.Id_Publicidad)
+
+        <label>Medio</label><br />
+        @Html.TextBoxFor(x => x.Medio)
+        <br /><br />
+
+        <label>Empresa</label><br />
+        @Html.TextBoxFor(x => x.Id_Empresa)
+        <br /><br />
+
+        <label>Fecha Inicio</label><br />
+        @Html.TextBoxFor(x => x.FechaInicio)
+        <br /><br />
+
+        <label>Fecha Caducidad</label><br />
+        @Html.TextBoxFor(x => x.FechaCaducidad)
+        <br /><br />
+
+        <label>Costo</label><br />
+        @Html.TextBoxFor(x => x.Costo)
+        <br /><br />
+
+        @*<label>Rol</label><br />*@
+        @*<select name="Rol_id">
+                @foreach (var r in roles)
+                {
+                    <option @(r.Id_Rol == Model.Rol_id ? "selected" : "") value="@r.Id_Rol">@r.Nombre</option>
+                }
+            </select>*@
+        <br /><br />
+
+        <button type="submit">Enviar</button>
+    }
+</div>
+<!-- /.container-fluid -->
+<!-- Sticky Footer -->
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Page level plugin JavaScript-->
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/datatables/jquery.dataTables.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin.min.js"></script>
+<!-- Demo scripts for this page-->
+<script src="js/demo/datatables-demo.js"></script>
+<script src="js/demo/chart-area-demo.js"></script>
+
+<script type="text/javascript">
+        function openPage(pageName, elemnt, color) {
+            var i, tabcontent, tablink;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablink = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablink.length; i++) {
+                tablink[i].style.backgroundColor = "";
+            }
+
+            document.getElementById(pageName).style.display = "block";
+            elemnt.style.backgroundColor = color;
+        }
+</script>
