@@ -73,6 +73,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="PublicidadDAL.cs" />
     <Compile Include="RolDAL.cs" />
     <Compile Include="ServicioEmpresaDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />

@@ -1,0 +1,52 @@
+﻿@model List<ET.Publicidad>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container-fluid">
+    <h2>Publicidad</h2>
+
+    <a href="~/Publicidad/Editar">Nuevo Registro</a>
+
+    <table style="width: 500px">
+        <thead>
+            <tr>
+                <th style="text-align:left;">Medio</th>
+                <th style="text-align:left;">Empresa</th>
+                <th style="text-align:left;">Fecha Inicio</th>
+                <th style="text-align:left;">Fecha Caducidad</th>
+                <th style="text-align:left;">Costo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var u in Model)
+            {
+            <tr>
+                <td>@u.Medio</td>
+                <td>@u.Id_Empresa</td>
+                <td>@u.FechaInicio</td>
+                <td>@u.FechaCaducidad</td>
+                <td>@u.Costo</td>
+                <td style="width:200px">
+                    <a title="Editar" href="~/Publicidad/Editar/@u.Id_Publicidad"> Editar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- /.container-fluid -->
+<!-- Bootstrap core JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Page level plugin JavaScript-->
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="vendor/datatables/jquery.dataTables.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin.min.js"></script>
+<!-- Demo scripts for this page-->
+<script src="js/demo/datatables-demo.js"></script>
+<script src="js/demo/chart-area-demo.js"></script>
