@@ -60,22 +60,3 @@
     <script src="js/demo/datatables-demo.js"></script>
     <script src="js/demo/chart-area-demo.js"></script>
 
-    <script type="text/javascript">
-        function openPage(pageName, elemnt, color) {
-            var i, tabcontent, tablink;
-
-            tabcontent = document.getElementsByClassName("tabcontent");
-
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            tablink = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablink.length; i++) {
-                tablink[i].style.backgroundColor = "";
-            }
-
-            document.getElementById(pageName).style.display = "block";
-            elemnt.style.backgroundColor = color;
-        }
-    </script>

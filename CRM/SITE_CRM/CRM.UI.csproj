@@ -1875,6 +1875,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PublicidadController.cs" />
+    <Compile Include="Controllers\RecordatorioController.cs" />
     <Compile Include="Controllers\ServicioEmpController.cs" />
     <Compile Include="Controllers\TabsEmpresaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
@@ -1908,6 +1909,8 @@
     <Content Include="Views\ServicioEmp\Editar.cshtml" />
     <Content Include="Views\Publicidad\Index.cshtml" />
     <Content Include="Views\Publicidad\Editar.cshtml" />
+    <Content Include="Views\Recordatorio\Index.cshtml" />
+    <Content Include="Views\Recordatorio\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
